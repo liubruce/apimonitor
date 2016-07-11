@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>API监控配置</title>
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<h1 class="tools-title">
+<span class="tools-name">API监控配置</span>
+</h1>
+<div id="js-form-error" class="form-item form-item-error error mt10"></div>
+<div class="form-item mb20 clearfix">
+<select id="js-req-method" class="form-select fl mr10">
+<option value="GET" selected="">GET</option>
+<option value="POST">POST</option>
+<option value="PUT">PUT</option>
+<option value="PATCH">PATCH</option>
+<option value="DELETE">DELETE</option>
+<option value="COPY">COPY</option>
+<option value="HEAD">HEAD</option>
+<option value="OPTIONS">OPTIONS</option>
+<option value="LINK">LINK</option>
+<option value="UNLINK">UNLINK</option>
+<option value="PURGE">PURGE</option>
+</select>
+<input type="text" id="js-req-url" class="form-input input-long req-url-input fl mr10" placeholder="请输入请求地址" maxlength="500">
+<span id="js-submit-btn" class="opt-btn btn-blue fl" onclick="_hmt.push(['_trackEvent', '发送', 'send out aworks', '', 1]);">
+发送
+</span>
+<label class="form-label fr mt5 ml10">
+<input id="js-headers" type="checkbox">
+Headers</label>
+<label class="form-label fr mt5 ml10">
+<input id="js-url-params" type="checkbox">
+URL params</label>
+</div>
+<div id="js-url-params-block" class="params-block dn">
+<table class="params-table js-params-table">
+<thead>
+<th class="col-1">URL Parameter Key</th>
+<th class="col-2">Value</th>
+</thead>
+<tbody>
+<tr>
+<td class="col-1">
+<input type="text" class="form-input" maxlength="100">
+</td>
+<td class="col-2 clearfix">
+<input type="text" class="form-input fl" maxlength="300">
+<span class="btn-del js-del fl ml10">X</span>
+<span class="fl ml10 mt5 param-desc"></span>
+</td>
+</tr>
+</tbody>
+</table>
+<span class="js-add-param opt-btn btn-green mt10 mb20">添加</span>
+</div>
+<div id="js-headers-block" class="params-block mt20 dn">
+<table class="params-table js-params-table">
+<thead>
+<th class="col-1">Header</th>
+<th class="col-2">Value</th>
+</thead>
+<tbody>
+<tr>
+<td class="col-1">
+<input type="text" class="form-input" maxlength="100">
+</td>
+<td class="col-2 clearfix">
+<input type="text" class="form-input fl" maxlength="300">
+<span class="btn-del js-del fl ml10">X</span>
+<span class="fl ml10 mt5 param-desc"></span>
+</td>
+</tr>
+</tbody>
+</table>
+<span class="js-add-param opt-btn btn-green mt10 mb20">添加</span>
+</div>
+<div id="js-params-block" class="params-block dn">
+<ul class="params-type-list clearfix">
+<li class="params-type-item active" data-type>Body Parameter Form<i></i></li>
+<li class="params-type-item" data-type>Body Paramter JSON Object<i></i></li>
+<li class="params-type-item" data-type>Body Paramter XML<i></i></li>
+</ul>
+<section>
+<section data-body-param>
+<table class="params-table js-params-table">
+<thead>
+<th class="col-1">Body Parameter Key</th>
+<th class="col-2">Value</th>
+</thead>
+<tbody>
+<tr>
+<td class="col-1">
+<input type="text" class="form-input" maxlength="100">
+</td>
+<td class="col-2 clearfix">
+<input type="text" class="form-input fl" maxlength="5000">
+<span class="btn-del js-del fl ml10">X</span>
+<span class="fl ml10 mt5 param-desc"></span>
+</td>
+</tr>
+</tbody>
+</table>
+<span class="js-add-param opt-btn btn-green mt10 mb20">添加</span>
+</section>
+<section class="mb20 dn" data-body-param>
+<textarea id="body-param" style="width: 1059px;"></textarea>
+</section>
+</section>
+</div>
+<table id="js-http-block" class="http-block">
+<thead>
+<th class="col-1">Response Header</th>
+<th class="col-2">Response Body</th>
+</thead>
+<tbody>
+<tr>
+<td class="col-1">
+<pre id="js-res-header"></pre>
+</td>
+<td class="col-2">
+<div id="js-res-body-block" class="res-body-block dn">
+<textarea id="js-res-body" class="form-textarea"></textarea>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<pre>这是 预设(preformatted)文本.在pre这个tag里的文本保留 空格和分行。</pre>
+ <code>callgetOrders</code>
+
+<script src="./js/angular.min1.2.15.js"></script>
+</body>
+</html>

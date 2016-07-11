@@ -1,0 +1,42 @@
+2016-07-11 21:08:15.157  INFO 40378 --- [main] com.lingcloud.ApimonitorApplication      : Starting ApimonitorApplication on localhost with PID 40378 (/Users/bruceliu/git/apimonitor/target/classes started by bruceliu in /Users/bruceliu/git/apimonitor)
+2016-07-11 21:08:15.161  INFO 40378 --- [main] com.lingcloud.ApimonitorApplication      : No active profile set, falling back to default profiles: default
+2016-07-11 21:08:15.669  INFO 40378 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d6da883: startup date [Mon Jul 11 21:08:15 SGT 2016]; root of context hierarchy
+2016-07-11 21:08:18.159  INFO 40378 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$782f4881] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-07-11 21:08:18.899  INFO 40378 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9000 (http)
+2016-07-11 21:08:18.953  INFO 40378 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-07-11 21:08:18.956  INFO 40378 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.36
+2016-07-11 21:08:19.211  INFO 40378 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-07-11 21:08:19.211  INFO 40378 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3547 ms
+2016-07-11 21:08:19.777  INFO 40378 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-07-11 21:08:19.785  INFO 40378 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-07-11 21:08:19.786  INFO 40378 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-07-11 21:08:19.786  INFO 40378 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2016-07-11 21:08:19.786  INFO 40378 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2016-07-11 21:08:20.163  INFO 40378 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-07-11 21:08:20.177  INFO 40378 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-07-11 21:08:20.322  INFO 40378 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-07-11 21:08:20.325  INFO 40378 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-07-11 21:08:20.328  INFO 40378 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-07-11 21:08:20.732  INFO 40378 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-07-11 21:08:21.562  INFO 40378 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2016-07-11 21:08:21.750  INFO 40378 --- [main] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-07-11 21:08:22.111  INFO 40378 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-07-11 21:08:22.179  INFO 40378 --- [main] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-07-11 21:08:22.878  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@d6da883: startup date [Mon Jul 11 21:08:15 SGT 2016]; root of context hierarchy
+2016-07-11 21:08:22.997  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test]}" onto public java.lang.String com.lingcloud.apimonitor.APIMonitorController.test(java.lang.String,org.springframework.ui.Model)
+2016-07-11 21:08:22.998  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/apiconfig],methods=[GET]}" onto public java.lang.String com.lingcloud.apimonitor.APIMonitorController.apiconfig(java.lang.String,org.springframework.ui.Model)
+2016-07-11 21:08:22.999  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/apiconfig],methods=[POST]}" onto public java.lang.String com.lingcloud.apimonitor.APIMonitorController.apiconfigSummit(com.lingcloud.apimonitor.APIContent,org.springframework.ui.Model)
+2016-07-11 21:08:22.999  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getTaskname]}" onto public java.lang.String com.lingcloud.apimonitor.APIMonitorController.getByEmail(java.lang.String)
+2016-07-11 21:08:23.000  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting]}" onto public com.lingcloud.apiservice.Greeting com.lingcloud.apiservice.GreetingController.greeting(java.lang.String)
+2016-07-11 21:08:23.002  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-07-11 21:08:23.003  INFO 40378 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-07-11 21:08:23.008  INFO 40378 --- [main] o.s.w.s.c.a.WebMvcConfigurerAdapter      : Adding welcome page: class path resource [static/index.html]
+2016-07-11 21:08:23.025  INFO 40378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Root mapping to handler of type [class org.springframework.web.servlet.mvc.ParameterizableViewController]
+2016-07-11 21:08:23.043  INFO 40378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-11 21:08:23.043  INFO 40378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-11 21:08:23.119  INFO 40378 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-07-11 21:08:23.986  INFO 40378 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-07-11 21:08:24.139  INFO 40378 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9000 (http)
+2016-07-11 21:08:24.146  INFO 40378 --- [main] com.lingcloud.ApimonitorApplication      : Started ApimonitorApplication in 9.863 seconds (JVM running for 10.31)

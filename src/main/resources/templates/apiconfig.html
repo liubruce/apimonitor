@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>API健康管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>API监控配置</h1>
+    <form action="#" th:action="@{/apiconfig}" th:object="${apicontent}" method="post">
+    	<p>API URL: <input type="url" th:field="*{apiurl}"/> API方法：
+	    	<select id="js-req-method" class="form-select fl mr10" th:field="*{type}">
+			<option value="GET" selected="">GET</option>
+			<option value="POST">POST</option>
+			<option value="PUT">PUT</option>
+			<option value="PATCH">PATCH</option>
+			<option value="DELETE">DELETE</option>
+			<option value="COPY">COPY</option>
+			<option value="HEAD">HEAD</option>
+			<option value="OPTIONS">OPTIONS</option>
+			<option value="LINK">LINK</option>
+			<option value="UNLINK">UNLINK</option>
+			<option value="PURGE">PURGE</option>
+			</select>
+			<input type="checkbox" name="ifurlparams" checked="checked" /> URL Params
+			<input type="checkbox" name="ifheaders"  /> Headers
+    	</p>
+    	<table border="1">
+    	<tr> 
+    	<th>参数Key</th>
+    	<th>参数Value</th> 
+    	</tr>
+    	<tr>
+    	<td><input type="text" th:field="*{type}" /></td>
+    	<td><input type="text" th:field="*{type}" /></td>
+    	</tr>
+        </table>
+    	<p>Id: <input type="text" th:field="*{type}" /></p>
+        <p>Message: <input type="text" th:field="*{type}" /></p>
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
